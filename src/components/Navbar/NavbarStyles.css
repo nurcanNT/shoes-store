@@ -1,0 +1,119 @@
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: linear-gradient( 135deg, #3B2667 10%, #BC78EC 100%);
+    padding: 20px 80px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    position: fixed;
+    top:0px;
+     left:0px; 
+     right:0px; 
+    height:127px; 
+}
+nav h2.text{
+    font-size: 26px;
+    font-family: sans-serif;
+    color:#FBD786;
+}
+.icons a{
+    font-size: 2rem;
+    color: var(--black);
+    padding-left: 1rem;
+    text-decoration: none;
+ }
+ .icons a:hover{
+    color: #FBD786
+ }
+#left-text{
+    display: flex;
+}
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+#navbar li a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color:#FBD786;
+    transition: 0.3s ease-in-out;
+}
+#navbar li a:hover{
+    color: #00416A;
+}
+#navbar li a:hover::after
+{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #00416A;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+#navbar li a.active::after{
+    position: absolute;
+    content: "";
+    width: 30%;
+    height: 2px;
+    bottom: -4px;
+    left: 20px;
+    background:#FBD786 ;
+}
+#mobile {
+    display: none;
+}
+
+@media screen and (max-width:769px) {
+    #navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 75px;
+        right: -350px;
+        width: 300px;
+        height: 100vh;
+        background: rgb(131,58,180);
+        background: linear-gradient(93deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+        box-shadow: 0 55px 60px rgba(255, 166, 0, 0.801);
+        padding: 40px 0 0 10px;
+        transition: 0.3s ease-in-out;
+    }
+
+    #navbar.active{
+        right: 0px;
+    }
+    #navbar li{
+        margin-bottom: 25px;
+    }
+    #mobile{
+        display: block;
+    }
+    #bar{
+        font-size: 30px;
+        cursor: pointer;
+    }
+    
+}
+@media screen and (max-width:941px){
+  
+    nav{
+        padding: 20px 40px;
+    }
+}
+@media screen and (max-width:859px){
+  
+    nav{
+        padding: 20px 5px;
+    }
+}

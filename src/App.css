@@ -1,10 +1,259 @@
 .App {
   text-align: center;
 }
+:root{
+  --green:rgb(255, 166, 0);
+  --black:#2c2c54;
+}
+.heading{
+  padding: 7% 1% 0 0;
+  color: #3B2667;
+
+}
+.card-title{
+  padding: 5%;
+  white-space: nowrap;
+  height: 54px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+  
+}
+.banner-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.banner-container .banner{
+  flex: 1 1 40rem;
+  height: 25rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner-container .banner img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.banner-container .banner .content{
+  position: absolute;
+  top: 50%; left: 4%;
+  transform: translateY(-50%);
+}
+.banner-container .banner .content h3{
+  font-size: 3rem;
+  color: var(--black);
+}
+.banner-container .banner .content p{
+  font-size: 2rem;
+  color: #333;
+}
+.banner-container .banner:hover img{
+transform: scale(1.2) rotate(-5deg);
+}
+
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+.box-container{
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.box img{
+  width: 500px;
+  height: 500px;
+  margin-right: 100px;
+}
+
+.box-container .box h3{
+  font-size: 3.5rem;
+  color: var(--black);
+}
+.box-container .box p{
+  font-size: 2rem;
+  color: #666;
+  padding: .5rem 0;
+}
+.box-container .box btn{
+  display: block;
+}
+
+
+.box-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 5em;
+}
+
+.box-container .box{
+  flex: 1 1 27rem;
+  text-align: center;
+  padding: 2rem;
+  border: 0.1rem solid #3B2667 ;
+  border-radius: .5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.box-container .box img{/*???*/
+  width: 15rem;
+  height: 9rem;
+  margin-left: 10rem;
+}
+.box-container .box .price{
+  font-size: 30px;
+  color: #1a994f;
+  padding: 2rem 0;
+}
+.box-container .box .price span{
+  font-size: 1.5rem;
+  color: #999;
+  text-decoration: line-through;
+}
+.btn{
+  display: inline-block;
+  margin-top: -3rem;
+  background-image: linear-gradient( 135deg, #3B2667 10%, #BC78EC 100%);
+  color: #fff;
+  padding: 0rem 7rem;
+  font-size: 2rem;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:hover{
+  background: var(--black);
+}
+.box-container .box btn{
+  display: block;
+}
+
+.footer .box-container2{
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.footer .box-container2 .headingh3{
+  text-align: left;
+}
+.footer .box-container2 .text2{
+  text-align: left;
+}
+.footer .box-container2 .share{
+  text-align: left;
+}
+.footer{
+  padding: 7%;
+  bottom: 0;
+}
+
+.footer .box-container2 .logo{
+  text-decoration: none;
+}
+
+.footer .box-container2 .box2{
+  padding: 1rem 0;
+  flex: 1 1 25rem;
+}
+
+.footer .box-container2 .box2 .share a{
+  padding: 0;
+  height: 4rem;
+  width: 6rem;
+  line-height: 5rem;
+  text-align: center;
+}
+
+.footer .box-container2 .box2 h3{
+  font-size: 2.5rem;
+  color: var(--black);
+}
+
+.footer .box-container2 .box2 p{
+  font-size: 1.3rem;
+  color: #666;
+  padding: .7rem 0;
+}
+
+.footer .box-container2 .box2 .links{
+  padding: 1rem 0;
+}
+
+.footer .box-container2 .box2 .links a{
+  display: block;
+  padding: .5rem 0;
+  font-size: 1.7rem;
+  color: #333;
+  text-decoration: none;
+}
+
+.footer .box-container2 .box2 .links a:hover{
+  text-decoration: underline;
+  color: var(--green);
+}
+
+.footer .credit{
+  padding: 2.5rem 1rem;
+  border-top: .1rem solid rgba(0, 0, 0, .1);
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.footer .credit span{
+  color: var(--green);
+}
+
+.home{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.home .image{
+  flex: 1 1 40rem;
+  padding-top: 5rem;
+}
+.home .image img{
+  width: 90%;
+}
+.home .content{
+  flex: 1 1 40rem;
+}
+.home .content span{
+  font-size: 3rem;
+  color: #666;
+  text-align: left;
+  margin-right: 52%;
+}
+.home .content h3{
+  font-size: 4rem;
+  color: var(--black);
+  text-align: left;
+}
+.card{
+  border:1px solid #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 400px;
+}
+
+.card-top h1{
+  font-size: 1rem;
+}
+.card-top > img {
+  width: 300px;
+  height: 400px;
+  object-fit: contain;
 }
 
 @media (prefers-reduced-motion: no-preference) {
