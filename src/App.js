@@ -1,4 +1,5 @@
 import React from "react";
+// import { BrowserRouter, Routes,  Route} from "react-router-dom";
 import './App.css';
 import Navbar from "./components/Navbar/Navbar";
 import Product from "./components/Product/Product";
@@ -16,6 +17,15 @@ function App() {
     <div className="App">
      <Navbar/>
      <HomeTitle/>
+     {/* <BrowserRouter>
+      <Routes>
+        <Route path="Heeled" element={<Heeled />}>
+          <Route path="Adidas" element={<Adidas />} />
+          <Route path="Nike" element={<Nike />} />
+          <Route path="Product" element={<Product/>} />
+        </Route>
+      </Routes>
+    </BrowserRouter> */}
      <Heeled/>
      <Nike/>
      <Banner1/>

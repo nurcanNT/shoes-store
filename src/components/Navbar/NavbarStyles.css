@@ -29,7 +29,7 @@ nav h2.text{
 #left-text{
     display: flex;
 }
-#navbar{
+ #navbar{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -68,12 +68,12 @@ nav h2.text{
     bottom: -4px;
     left: 20px;
     background:#FBD786 ;
-}
+} 
 #mobile {
     display: none;
 }
 
-@media screen and (max-width:769px) {
+@media screen and (max-width:768px) {
     #navbar{
         display: flex;
         flex-direction: column;
@@ -84,8 +84,7 @@ nav h2.text{
         right: -350px;
         width: 300px;
         height: 100vh;
-        background: rgb(131,58,180);
-        background: linear-gradient(93deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+        background: linear-gradient( 135deg, #3B2667 10%, #BC78EC 100%);
         box-shadow: 0 55px 60px rgba(255, 166, 0, 0.801);
         padding: 40px 0 0 10px;
         transition: 0.3s ease-in-out;
@@ -103,7 +102,7 @@ nav h2.text{
     #bar{
         font-size: 30px;
         cursor: pointer;
-        padding: 4rem;
+        padding: 2rem;
     }
     
 }
@@ -116,6 +115,6 @@ nav h2.text{
 @media screen and (max-width:859px){
   
     nav{
-        padding: 20px 5px;
+        padding: 20px 20px;
     }
 }
