@@ -10,6 +10,7 @@ nav{
      left:0px; 
      right:0px; 
     height:127px; 
+    z-index: 9999;
 }
 nav h2.text{
     font-size: 26px;
@@ -102,6 +103,7 @@ nav h2.text{
     #bar{
         font-size: 30px;
         cursor: pointer;
+        padding: 4rem;
     }
     
 }
