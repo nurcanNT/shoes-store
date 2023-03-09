@@ -6,9 +6,9 @@
   --black:#2c2c54;
 }
 .heading{
-  padding: 7% 1% 0 0;
+  padding: 3rem;
   color: #3B2667;
-
+  font-size: 47px;
 }
 .card-title{
   padding: 5%;
@@ -277,6 +277,15 @@ transform: scale(1.2) rotate(-5deg);
   height: 400px;
   object-fit: contain;
 }
+.category-menu{
+  display: flex;
+  justify-content: center;
+}
+.category-menu a{
+  margin-right: 3%;
+  margin-top: 2%;
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -349,6 +358,20 @@ transform: scale(1.2) rotate(-5deg);
   color: var(--black);
   text-align: left;
 }
+.banner-container .banner img {
+  height: 70%;
+  width: 94%;
+}
+.banner-container .banner .content{
+  top: 38%;
+  margin: 2%;
+}
+.banner-container .banner .content h3{
+  font-size: 35px;
+}
+.banner-container .banner .content p {
+  font-size: 20px;
+}
 }
 @media(max-width:1090px){
   .box-container{
@@ -374,6 +397,16 @@ transform: scale(1.2) rotate(-5deg);
 }
 .home .content{
   padding: 5%;
+}
+.banner-container .banner .content{
+  top: 38%;
+  margin: 2%;
+}
+.banner-container .banner .content h3{
+  font-size: 35px;
+}
+.banner-container .banner .content p {
+  font-size: 20px;
 }
 
 }
@@ -437,6 +470,22 @@ font-size: 30px;
 .icons{
   display: none;
 }
+
+.category-menu {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+.banner-container .banner .content{
+  top: 38%;
+  margin: 2%;
+}
+.banner-container .banner .content h3{
+  font-size: 35px;
+}
+.banner-container .banner .content p {
+  font-size: 20px;
+}
 }
 @media(max-width:415px){
   .icons{
@@ -494,5 +543,23 @@ font-size: 30px;
     font-size: 16px;
   }
   
+  .category-menu {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+.heading{
+  font-size: 27px;
+}
+.banner-container .banner .content{
+  top: 38%;
+  margin: 2%;
+}
+.banner-container .banner .content h3{
+  font-size: 35px;
+}
+.banner-container .banner .content p {
+  font-size: 20px;
+}
   }
 
