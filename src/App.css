@@ -280,6 +280,7 @@ transform: scale(1.2) rotate(-5deg);
 .category-menu{
   display: flex;
   justify-content: center;
+  margin-bottom: 9%;
 }
 .category-menu a{
   margin-right: 3%;
@@ -475,6 +476,7 @@ font-size: 30px;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
+  margin-bottom: 3%;
 }
 .banner-container .banner .content{
   top: 38%;
@@ -547,6 +549,7 @@ font-size: 30px;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
+    margin-bottom: 3%;
 }
 .heading{
   font-size: 27px;
