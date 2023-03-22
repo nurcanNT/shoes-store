@@ -239,11 +239,11 @@ transform: scale(1.2) rotate(-5deg);
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  padding-top:100px;
 }
 
 .home .image{
   flex: 1 1 40rem;
-  padding-top: 5rem;
 }
 .home .image img{
   width: 90%;
@@ -287,6 +287,7 @@ transform: scale(1.2) rotate(-5deg);
   margin-top: 2%;
 }
 
+/*basket*/
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

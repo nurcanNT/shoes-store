@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Skeleton from "react-loading-skeleton";
 import Axios from "axios";
 
+
 export default function Product(){
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(false);

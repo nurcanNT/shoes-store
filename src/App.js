@@ -12,6 +12,7 @@ import Nike from "./components/Product/Nike";
 import Footer from "./components/Footer/Footer";
 import HomeTitle from "./components/HomeTitle/Home";
 import Heeled from "./components/Product/Heeled";
+import Basket from "./components/Basket/Basket";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -53,27 +54,24 @@ useEffect(() => {
 })
 
   return (
+    <React.Fragment>
     <div className="App">
      <Navbar/>
-     <HomeTitle/>
+     
      <Router>
-      <div>
-      <h1 className="heading">{title || <Skeleton  baseColor="#d3cce3" width="450px"/>}</h1>
-      <div className="category-menu">
-       {title2 || <Skeleton  baseColor="#d3cce3" width="150px" height="50px"/>}  {title3 || <Skeleton  baseColor="#d3cce3" width="150px" height="50px" />} 
-       {title4 || <Skeleton  baseColor="#d3cce3" width="150px" height="50px" />}  {title5 || <Skeleton  baseColor="#d3cce3" width="150px" height="50px" />} 
-      </div>
-      </div>
       <Switch>
         <Route path="/heeled">{<Heeled/>}</Route>
         <Route path="/nike">{<Nike/>}</Route>
         <Route path="/adidas">{<Adidas/>}</Route>
         <Route path="/skechers">{<Skechers/>}</Route>
+        <Route path="/basket"><Basket/></Route>
+        <Route path="/"><HomeTitle/> <div> <h1 className="heading">{title || <Skeleton  baseColor="#d3cce3" width="450px"/>}</h1> <div className="category-menu"> {title2 || <Skeleton  baseColor="#d3cce3" width="150px" height="50px"/>}  {title3 || <Skeleton  baseColor="#d3cce3" width="150px" height="50px" />} {title4 || <Skeleton  baseColor="#d3cce3" width="150px" height="50px" />}  {title5 || <Skeleton  baseColor="#d3cce3" width="150px" height="50px" />} </div> </div></Route>
       </Switch>
     </Router>
      <Banner1/>
      <Footer/>
     </div>
+    </React.Fragment>
   );
 }
 

@@ -1,6 +1,9 @@
 import { Component } from "react";
+import { Badge } from 'react-bootstrap'
 import "./NavbarStyles.css";
 import { FaShoppingCart, FaHeart, FaUserCircle } from "react-icons/fa";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
 class Navbar extends Component{
     state = {clicked:false};
     handleClick = () => {
@@ -23,16 +26,9 @@ class Navbar extends Component{
             <h2 className="text"> Talk Shoes</h2>
             </div>
             <div>
-            {/* <div className="icons">
-                <div className="menu-icon">
-                    <a href="#" className="fas" > <FaShoppingCart/></a>
-                    <a href="#heart" className="fas "> <FaHeart/></a>
-                    <a href="#" className="fas "> <FaUserCircle/></a>
-                </div>
-            </div> */}
                 <ul id="navbar" className={this.state.clicked ? "#navbar active" : "#navbar"}>
                     <li><a className="active" href="index.html">Home</a></li>
-                    <li><a href="#" className="fas" > <FaShoppingCart/></a></li>
+                    <li><a className="basket" href="/basket"><FaShoppingCart /><Badge variant="success">{0}</Badge></a></li>
                     <li> <a href="#heart" className="fas "> <FaHeart/></a></li>
                     <li> <a href="#" className="fas "> <FaUserCircle/></a></li>
                 </ul>
