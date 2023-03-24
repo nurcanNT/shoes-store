@@ -21,6 +21,7 @@ function App() {
     const [title3, setTitle3] = useState("");
     const [title4, setTitle4] = useState("");
     const [title5, setTitle5] = useState("");
+    const [card, setCard] = useState({});
 
     useEffect(() => {
         setTimeout(() => {
@@ -49,7 +50,7 @@ useEffect(() => {
 useEffect(() => {
   setTimeout(() => {
       setLoading(false);
-      setTitle5(<Link to="/skechers"><div><a href="#" className="btn">Skechers</a></div></Link>);
+      setTitle5(<><Link to="/skechers"><div><a href="#" className="btn">Skechers</a></div></Link><Link to="/basket" className="btn"><div>Basket</div></Link></>);
   },1000)
 })
 
@@ -59,13 +60,14 @@ useEffect(() => {
      <Navbar/>
      
      <Router>
+     <HomeTitle/> <div> <h1 className="heading">{title || <Skeleton  baseColor="#d3cce3" width="450px"/>}</h1> <div className="category-menu"> {title2 || <Skeleton  baseColor="#d3cce3" width="150px" height="50px"/>}  {title3 || <Skeleton  baseColor="#d3cce3" width="150px" height="50px" />} {title4 || <Skeleton  baseColor="#d3cce3" width="150px" height="50px" />}  {title5 || <Skeleton  baseColor="#d3cce3" width="150px" height="50px" />} </div> </div>
       <Switch>
         <Route path="/heeled">{<Heeled/>}</Route>
         <Route path="/nike">{<Nike/>}</Route>
-        <Route path="/adidas">{<Adidas/>}</Route>
+        <Route path="/adidas">{<Adidas card={card} setCard={setCard} />}</Route>
         <Route path="/skechers">{<Skechers/>}</Route>
-        <Route path="/basket"><Basket/></Route>
-        <Route path="/"><HomeTitle/> <div> <h1 className="heading">{title || <Skeleton  baseColor="#d3cce3" width="450px"/>}</h1> <div className="category-menu"> {title2 || <Skeleton  baseColor="#d3cce3" width="150px" height="50px"/>}  {title3 || <Skeleton  baseColor="#d3cce3" width="150px" height="50px" />} {title4 || <Skeleton  baseColor="#d3cce3" width="150px" height="50px" />}  {title5 || <Skeleton  baseColor="#d3cce3" width="150px" height="50px" />} </div> </div></Route>
+        <Route path="/basket"><Basket card={card} setCard={setCard}/></Route>
+        <Route path="/"></Route>
       </Switch>
     </Router>
      <Banner1/>

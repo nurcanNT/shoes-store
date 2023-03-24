@@ -52,7 +52,7 @@ export default function Product(){
                                                 {product.Price} <span>{}</span></div>
                                                 <div className="button">
                                                 <a href="#" className="btn">
-                                                Buy to Amazon
+                                                Add To Cart
                                                 </a></div>
                                             
                                         </div>

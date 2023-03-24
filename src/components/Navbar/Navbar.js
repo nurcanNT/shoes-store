@@ -2,17 +2,23 @@ import { Component } from "react";
 import { Badge } from 'react-bootstrap'
 import "./NavbarStyles.css";
 import { FaShoppingCart, FaHeart, FaUserCircle } from "react-icons/fa";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 class Navbar extends Component{
-    state = {clicked:false};
+    state = {
+        clicked:false,
+        cartItems: [] //sepet içeriği
+    };
     handleClick = () => {
         this.setState({clicked: !this.state.clicked})
     }
+
     render(){
         const styles = { //icon color
             color: 'rgba(255, 166, 0, 0.801)',
           };
+        const { cartItems } = this.state; //sepet içeriği
+        const cartItemCount = cartItems.reduce((count, item) => count + item.quantity, 0); //sepetteki ürün sayısı hesaplanır
+
     return(
         <>
         <nav>
@@ -28,7 +34,7 @@ class Navbar extends Component{
             <div>
                 <ul id="navbar" className={this.state.clicked ? "#navbar active" : "#navbar"}>
                     <li><a className="active" href="index.html">Home</a></li>
-                    <li><a className="basket" href="/basket"><FaShoppingCart /><Badge variant="success">{0}</Badge></a></li>
+                    <li><a className="basket" href="/basket"><FaShoppingCart /><Badge variant="success">{cartItemCount}</Badge></a></li>
                     <li> <a href="#heart" className="fas "> <FaHeart/></a></li>
                     <li> <a href="#" className="fas "> <FaUserCircle/></a></li>
                 </ul>
