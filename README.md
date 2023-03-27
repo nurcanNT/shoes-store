@@ -1,3 +1,33 @@
+# What was done in Talk Shoes?
+* Built with React technology
+* Skeleton structure used
+* React Router used
+* Bootstrap used
+* Redux used
+* Inline Style used
+* Design work
+
+# Talk Shoes View
+
+![image](https://user-images.githubusercontent.com/105509750/227976552-6d227a36-aebf-4277-a3a6-969ac14ce5f3.png)
+
+![image](https://user-images.githubusercontent.com/105509750/227976757-4d901387-7778-41f6-87c5-11d1ba6acfab.png)
+
+![image](https://user-images.githubusercontent.com/105509750/227977084-902ec221-285a-49cd-b8f2-f5cba763d556.png)
+
+![image](https://user-images.githubusercontent.com/105509750/227977269-afa6e7a2-47c5-4952-a2e2-ab48d7f960c7.png)
+
+![image](https://user-images.githubusercontent.com/105509750/227982448-9d604bcd-e86d-413a-8611-634fe7ce06ed.png)
+
+![image](https://user-images.githubusercontent.com/105509750/227982617-0bc94b85-04e9-48a4-97bd-94b4843b41ba.png)
+
+![image](https://user-images.githubusercontent.com/105509750/227977483-e6807aaa-0bca-44a6-a5af-4097a7551809.png)
+
+![image](https://user-images.githubusercontent.com/105509750/227977576-84a4ef61-082d-4475-8675-731a7bc78b5a.png)
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
