@@ -1,19 +1,18 @@
 {
   "files": {
-    "main.css": "/shoes-store/static/css/main.c60428cd.css",
-    "main.js": "/shoes-store/static/js/main.b42e2a11.js",
+    "main.css": "/shoes-store/static/css/main.c4a7863e.css",
+    "main.js": "/shoes-store/static/js/main.703f5627.js",
     "static/js/787.54b6a899.chunk.js": "/shoes-store/static/js/787.54b6a899.chunk.js",
     "static/media/React.gif": "/shoes-store/static/media/React.29a799b6146e7c67b4c1.gif",
-    "static/media/sale.png": "/shoes-store/static/media/sale.5443c29949546650719e.png",
+    "static/media/React (11).gif": "/shoes-store/static/media/React (11).74fc1a6fee781f3b3825.gif",
     "static/media/banner.png": "/shoes-store/static/media/banner.273efbcc895f6ef633d4.png",
-    "static/media/banner3.png": "/shoes-store/static/media/banner3.6d070e70609c2ca5bfa3.png",
     "index.html": "/shoes-store/index.html",
-    "main.c60428cd.css.map": "/shoes-store/static/css/main.c60428cd.css.map",
-    "main.b42e2a11.js.map": "/shoes-store/static/js/main.b42e2a11.js.map",
+    "main.c4a7863e.css.map": "/shoes-store/static/css/main.c4a7863e.css.map",
+    "main.703f5627.js.map": "/shoes-store/static/js/main.703f5627.js.map",
     "787.54b6a899.chunk.js.map": "/shoes-store/static/js/787.54b6a899.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c60428cd.css",
-    "static/js/main.b42e2a11.js"
+    "static/css/main.c4a7863e.css",
+    "static/js/main.703f5627.js"
   ]
 }
