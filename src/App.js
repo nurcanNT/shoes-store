@@ -33,26 +33,26 @@ function App() {
     useEffect(() => {
       setTimeout(() => {
           setLoading(false);
-          setTitle2(<Link to="/shoes-store//adidas"><div><a href="#" className="btn">Adidas</a></div></Link> );
+          setTitle2(<Link to="/shoes-store/adidas"><div><a href="#" className="btn">Adidas</a></div></Link> );
       },1000)
   })
   useEffect(() => {
     setTimeout(() => {
         setLoading(false);
-        setTitle3(<Link to="/shoes-store//nike"><div><a href="#" className="btn">Nike</a></div></Link>);
+        setTitle3(<Link to="/shoes-store/nike"><div><a href="#" className="btn">Nike</a></div></Link>);
     },1000)
 })
 useEffect(() => {
   setTimeout(() => {
       setLoading(false);
-      setTitle4(<Link to="/shoes-store//heeled"><div><a href="#" className="btn">Heeled</a></div></Link>);
+      setTitle4(<Link to="/shoes-store/heeled"><div><a href="#" className="btn">Heeled</a></div></Link>);
   },1000)
 })
 useEffect(() => {
   setTimeout(() => {
       setLoading(false);
-      setTitle5(<><Link to="/shoes-store//skechers"><div><a href="#" className="btn">Skechers</a></div></Link> 
-       <Link to="/shoes-store//basket"> <div><a  href="#" className="btn">Basket</a></div></Link></>);
+      setTitle5(<><Link to="/shoes-store/skechers"><div><a href="#" className="btn">Skechers</a></div></Link> 
+       <Link to="/shoes-store/basket"> <div><a  href="#" className="btn">Basket</a></div></Link></>);
   },1000)
 })
 
@@ -64,12 +64,12 @@ useEffect(() => {
      <Navbar basketCount={basketCount} setBasketCount={setBasketCount}/>
      <HomeTitle/> <div> <h1 className="heading">{title || <Skeleton  baseColor="#d3cce3" width="250px"/>}</h1> <div className="category-menu"> {title2 || <Skeleton  baseColor="#d3cce3" width="150px" height="50px"/>}  {title3 || <Skeleton  baseColor="#d3cce3" width="150px" height="50px" />} {title4 || <Skeleton  baseColor="#d3cce3" width="150px" height="50px" />}  {title5 || <Skeleton  baseColor="#d3cce3" width="150px" height="50px" />} </div> </div>
       <Switch>
-        <Route path="/heeled">{<Heeled card={card} setCard={setCard} basketCount={basketCount} setBasketCount={setBasketCount} />}</Route>
-        <Route path="/nike">{<Nike card={card} setCard={setCard} basketCount={basketCount} setBasketCount={setBasketCount} />}</Route>
+        <Route path="/shoes-store/heeled">{<Heeled card={card} setCard={setCard} basketCount={basketCount} setBasketCount={setBasketCount} />}</Route>
+        <Route path="/shoes-store/nike">{<Nike card={card} setCard={setCard} basketCount={basketCount} setBasketCount={setBasketCount} />}</Route>
 
-        <Route path="/adidas">{<Adidas card={card} setCard={setCard} basketCount={basketCount} setBasketCount={setBasketCount} />}</Route>
-        <Route path="/skechers">{<Skechers card={card} setCard={setCard} basketCount={basketCount} setBasketCount={setBasketCount} />}</Route>
-        <Route path="/basket"><Basket card={card} setCard={setCard} basketCount={basketCount} setBasketCount={setBasketCount} /></Route>
+        <Route path="/shoes-store/adidas">{<Adidas card={card} setCard={setCard} basketCount={basketCount} setBasketCount={setBasketCount} />}</Route>
+        <Route path="/shoes-store/skechers">{<Skechers card={card} setCard={setCard} basketCount={basketCount} setBasketCount={setBasketCount} />}</Route>
+        <Route path="/shoes-store/basket"><Basket card={card} setCard={setCard} basketCount={basketCount} setBasketCount={setBasketCount} /></Route>
         <Route path="/"></Route>
       </Switch>
     </Router>
