@@ -19,23 +19,22 @@ function HomeTitle (){
         setTimeout(() => {
             setLoading(false);
             setTitle2("Everyday and classic shoes you need are here");
-        },3000)
+        },1000)
     })
     useEffect(() => {
         setTimeout(() => {
             setLoading(false);
             setEmulatorImg(true);
-        },3000)
+        },1000)
     })
     return(
         <section className="home" id="home">
     <div className="image">
-    {emulatorImg ? <img src={img1} alt=""/> : <Skeleton baseColor="#d3cce3" style={{  marginTop: '10px', }} width="70%" height={550} />}
-
+    {emulatorImg ? <img src={img1} alt=""/> : <Skeleton baseColor="#d3cce3" style={{  marginTop: '17px', }} width="70%" height={250} />}
        </div>
     <div className="content">
-        <div><span>{title || <Skeleton baseColor="#d3cce3" width={150} height={25} />}</span></div>
-        <h3>{title2 || <Skeleton baseColor="#d3cce3" width={150} height={25} count={2} />}</h3>
+        <div><span>{title || <Skeleton baseColor="#d3cce3" width={200} height={25} />}</span></div>
+        <h3>{title2 || <Skeleton baseColor="#d3cce3" width={200} height={25} count={2} />}</h3>
     </div>
 
 </section>

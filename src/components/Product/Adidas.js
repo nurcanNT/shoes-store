@@ -3,7 +3,7 @@ import Skeleton from "react-loading-skeleton";
 import Axios from "axios";
 
 
-export default function Product({ card, setCard}){
+export default function Product({ card, setCard, basketCount, setBasketCount}){
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(false);
     const [title, setTitle] = useState("");
@@ -13,6 +13,8 @@ export default function Product({ card, setCard}){
         card[product.ASIN] = product
         setCard({...card});
 
+        basketCount = Object.keys(card).length
+        setBasketCount(basketCount)
         console.log("cart::",card)
     };
 
@@ -54,7 +56,7 @@ export default function Product({ card, setCard}){
 
     return(
         <>
-        <h1 className="heading">{title || <Skeleton baseColor="#d3cce3" width={700}/>}</h1>
+        <h1 className="heading">{title || <Skeleton baseColor="#d3cce3" width={200}/>}</h1>
         <div className="box-container">
             {loading && (
                 // Yüklenirken Skeleton görünümünü gösterin

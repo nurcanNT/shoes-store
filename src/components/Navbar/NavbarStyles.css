@@ -26,15 +26,14 @@ nav h2.text{
     color: #FBD786
  }
  #navbar span{
- padding: 0 3px;
- background-color: green;
+ padding: 0 4px;
  color: white;
  font-weight: bold;
  font-size: 17px;
  border-radius: 3px;
  position: relative;
  top: -17px;
- right: 23px;
+ right: 7px;
  }
 #left-text{
     display: flex;
@@ -90,7 +89,7 @@ nav h2.text{
         align-items: flex-start;
         justify-content: flex-start;
         position: fixed;
-        top: 75px;
+        top: 93px;
         right: -350px;
         width: 300px;
         height: 100vh;

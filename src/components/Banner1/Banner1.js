@@ -29,9 +29,9 @@ function Banner (){
         <section className="banner-container">
 
     <div className="banner">
-    {title ? <img src={Img1} alt=""/> : <Skeleton baseColor="#d3cce3" width={1300} height={400}/>}
+    {title ? <img src={Img1} alt=""/> : <Skeleton baseColor="#d3cce3" width={400} height={250}/>}
         
-        {title2 || <Skeleton count={2} width={70}/>}
+        {title2 || <Skeleton baseColor="#d3cce3" count={2} width={70}/>}
     </div>
 </section>
     );

@@ -120,19 +120,19 @@ transform: scale(1.2) rotate(-5deg);
   color: #999;
   text-decoration: line-through;
 }
-.btn{
+a.btn{
   display: inline-block;
   margin-top: -1rem;
   background-image: linear-gradient( 135deg, #3B2667 10%, #BC78EC 100%);
   color: #fff;
-  padding: 1rem 5rem;
+  padding: 1rem 2rem;
   font-size: 30px;
   text-align: center;
   cursor: pointer;
   text-decoration: none;
 }
 
-.btn:hover{
+a.btn:hover{
   background: var(--black);
   color: #fff;
 }
@@ -239,7 +239,6 @@ transform: scale(1.2) rotate(-5deg);
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  padding-top:100px;
 }
 
 .home .image{
@@ -262,17 +261,17 @@ transform: scale(1.2) rotate(-5deg);
   color: var(--black);
   text-align: left;
 }
-.card{
+div.card{
   border:1px solid #fff;
   border-radius: 8px;
   overflow: hidden;
   height: 100%;
 }
 
-.card-top h1{
+div.card-top h1{
   font-size: 1rem;
 }
-.card-top > img {
+div.card-top > img {
   width: 300px;
   height: 400px;
   object-fit: contain;
@@ -284,7 +283,6 @@ transform: scale(1.2) rotate(-5deg);
 }
 .category-menu a{
   margin-right: 3%;
-  margin-top: 2%;
 }
 
 /*basket*/
@@ -331,7 +329,7 @@ transform: scale(1.2) rotate(-5deg);
   font-size: 18px;
   margin-top: -1rem;
 }
-.card-title{
+div.card-title{
   font-size: 20px;
 }
 .home{
@@ -342,8 +340,7 @@ transform: scale(1.2) rotate(-5deg);
 }
 
 .home .image{
-  flex: 1 1 40rem;
-  padding-top: 5rem;
+  flex: 1 1 21rem;
 }
 .home .image img{
   width: 60%;
@@ -385,7 +382,7 @@ transform: scale(1.2) rotate(-5deg);
   .box-container .box{
     padding: 1rem;
   }
-  .card{
+  div.card{
     width: 100%;
     height: 100%;
   }
@@ -395,7 +392,7 @@ transform: scale(1.2) rotate(-5deg);
     margin-top: -1rem;
   }
   .home .image img {
-    width: 50%;
+    flex: 1 1 21rem;
 }
 .home .content{
   padding: 5%;
@@ -409,6 +406,13 @@ transform: scale(1.2) rotate(-5deg);
 }
 .banner-container .banner .content p {
   font-size: 20px;
+}
+.category-menu a {
+  margin-right: -2%;
+  padding: 1rem 1rem 1rem 1rem;
+}
+img.gif{
+  width: 50%;
 }
 
 }
@@ -427,7 +431,7 @@ transform: scale(1.2) rotate(-5deg);
   .box-container .box{
     margin-bottom: 15px;
   }
-.card{
+div.card{
   width: 100%;
   height: 100%;
 }
@@ -491,6 +495,31 @@ font-size: 30px;
 }
 }
 @media(max-width:415px){
+  a.btn{
+    padding: 0rem 2rem;
+    font-size: 25px;
+  }
+  .heading{
+    padding: 1rem;
+    font-weight: 600;
+  }
+  .box-container .box img {
+    padding: 2% !important; 
+    width: auto !important;
+  }
+  h2.card-title{
+    font-size: 20px;
+  }
+  h1.basketHeading{
+    font-weight: 700;
+    margin-top: 2rem;
+  }
+  div.price{
+    font-weight: 700;
+  }
+  img.gif{
+    width: 50%;
+  }
   .icons{
     display: none;
   }
@@ -551,6 +580,9 @@ font-size: 30px;
     flex-wrap: nowrap;
     flex-direction: column;
     margin-bottom: 3%;
+}
+.category-menu a{
+  margin-right: 3%;
 }
 .heading{
   font-size: 27px;
