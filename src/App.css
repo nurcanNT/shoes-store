@@ -344,10 +344,12 @@ div.card-title{
 }
 .home .image img{
   width: 60%;
+  margin-top: 30%;
 }
 .home .content{
   flex: 1 1 27rem;
   padding-top: 10rem;
+  margin-top: 15%;
 }
 .home .content span{
   font-size: 40px;
@@ -553,7 +555,7 @@ font-size: 30px;
     font-size: 28px;
   }
   .home .image img {
-    margin-top: 10%;
+    margin-top: 35%;
   }
   .footer .box-container2 .box2 p {
     font-size: 17px;
