@@ -5,7 +5,6 @@ nav{
     background-image: linear-gradient( 135deg, #3B2667 10%, #BC78EC 100%);
     padding: 20px 80px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
-    position: fixed;
     top:0px;
      left:0px; 
      right:0px; 
@@ -25,6 +24,16 @@ nav h2.text{
  }
  .icons a:hover{
     color: #FBD786
+ }
+ #navbar span{
+ padding: 0 4px;
+ color: white;
+ font-weight: bold;
+ font-size: 17px;
+ border-radius: 3px;
+ position: relative;
+ top: -17px;
+ right: 7px;
  }
 #left-text{
     display: flex;
@@ -80,7 +89,7 @@ nav h2.text{
         align-items: flex-start;
         justify-content: flex-start;
         position: fixed;
-        top: 75px;
+        top: 93px;
         right: -350px;
         width: 300px;
         height: 100vh;

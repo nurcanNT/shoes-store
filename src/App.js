@@ -12,6 +12,7 @@ import Nike from "./components/Product/Nike";
 import Footer from "./components/Footer/Footer";
 import HomeTitle from "./components/HomeTitle/Home";
 import Heeled from "./components/Product/Heeled";
+import Basket from "./components/Basket/Basket";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -20,6 +21,8 @@ function App() {
     const [title3, setTitle3] = useState("");
     const [title4, setTitle4] = useState("");
     const [title5, setTitle5] = useState("");
+    const [card, setCard] = useState({});
+    const [basketCount, setBasketCount] = useState(0);
 
     useEffect(() => {
         setTimeout(() => {
@@ -48,32 +51,32 @@ useEffect(() => {
 useEffect(() => {
   setTimeout(() => {
       setLoading(false);
-      setTitle5(<Link to="/skechers"><div><a href="#" className="btn">Skechers</a></div></Link>);
+      setTitle5(<><Link to="/skechers"><div><a href="#" className="btn">Skechers</a></div></Link> 
+       <Link to="/basket"> <div><a  href="#" className="btn">Basket</a></div></Link></>);
   },1000)
 })
 
   return (
+    <React.Fragment>
     <div className="App">
-     <Navbar/>
-     <HomeTitle/>
+     
      <Router>
-      <div>
-      <h1 className="heading">{title || <Skeleton  baseColor="#d3cce3" width="450px"/>}</h1>
-      <div className="category-menu">
-       {title2 || <Skeleton  baseColor="#d3cce3" width="150px" height="50px"/>}  {title3 || <Skeleton  baseColor="#d3cce3" width="150px" height="50px" />} 
-       {title4 || <Skeleton  baseColor="#d3cce3" width="150px" height="50px" />}  {title5 || <Skeleton  baseColor="#d3cce3" width="150px" height="50px" />} 
-      </div>
-      </div>
+     <Navbar basketCount={basketCount} setBasketCount={setBasketCount}/>
+     <HomeTitle/> <div> <h1 className="heading">{title || <Skeleton  baseColor="#d3cce3" width="250px"/>}</h1> <div className="category-menu"> {title2 || <Skeleton  baseColor="#d3cce3" width="150px" height="50px"/>}  {title3 || <Skeleton  baseColor="#d3cce3" width="150px" height="50px" />} {title4 || <Skeleton  baseColor="#d3cce3" width="150px" height="50px" />}  {title5 || <Skeleton  baseColor="#d3cce3" width="150px" height="50px" />} </div> </div>
       <Switch>
-        <Route path="/heeled">{<Heeled/>}</Route>
-        <Route path="/nike">{<Nike/>}</Route>
-        <Route path="/adidas">{<Adidas/>}</Route>
-        <Route path="/skechers">{<Skechers/>}</Route>
+        <Route path="/heeled">{<Heeled card={card} setCard={setCard} basketCount={basketCount} setBasketCount={setBasketCount} />}</Route>
+        <Route path="/nike">{<Nike card={card} setCard={setCard} basketCount={basketCount} setBasketCount={setBasketCount} />}</Route>
+
+        <Route path="/adidas">{<Adidas card={card} setCard={setCard} basketCount={basketCount} setBasketCount={setBasketCount} />}</Route>
+        <Route path="/skechers">{<Skechers card={card} setCard={setCard} basketCount={basketCount} setBasketCount={setBasketCount} />}</Route>
+        <Route path="/basket"><Basket card={card} setCard={setCard} basketCount={basketCount} setBasketCount={setBasketCount} /></Route>
+        <Route path="/"></Route>
       </Switch>
     </Router>
      <Banner1/>
      <Footer/>
     </div>
+    </React.Fragment>
   );
 }
 

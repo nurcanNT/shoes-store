@@ -30,12 +30,11 @@ function HomeTitle (){
     return(
         <section className="home" id="home">
     <div className="image">
-    {emulatorImg ? <img src={img1} alt=""/> : <Skeleton baseColor="#d3cce3" width={500} height={600}/>}
-
+    {emulatorImg ? <img src={img1} alt=""/> : <Skeleton baseColor="#d3cce3" style={{  marginTop: '17px', }} width="70%" height={250} />}
        </div>
     <div className="content">
-        <span>{title || <Skeleton baseColor="#d3cce3" width= {700} />}</span>
-        <h3>{title2 || <Skeleton baseColor="#d3cce3" count={2} width= {900}/>}</h3>
+        <div><span>{title || <Skeleton baseColor="#d3cce3" width={200} height={25} />}</span></div>
+        <h3>{title2 || <Skeleton baseColor="#d3cce3" width={200} height={25} count={2} />}</h3>
     </div>
 
 </section>
