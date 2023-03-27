@@ -52,7 +52,7 @@ class Navbar extends Component {
               <path d="M35.5 0H51.5L32.5 32H16.5L35.5 0Z" class="ccompli1" fill="#FF9736"></path>
               <path d="M19.5 0H31.5L12.5 32H0.5L19.5 0Z" class="ccompli2" fill="#FFBC7D"></path> </svg>
               </a>
-              <h2 className="text"> Talk Shoes</h2>
+              <h2 className="text"> TalkShoes</h2>
               </div>
               <div>
                   <ul id="navbar" className={this.state.clicked ? "#navbar active" : "#navbar"}>
