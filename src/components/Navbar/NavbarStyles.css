@@ -12,6 +12,9 @@ nav{
     height:127px; 
     z-index: 9999;
 }
+.hidden {
+    display:none;
+  }
 nav h2.text{
     font-size: 26px;
     font-family: sans-serif;

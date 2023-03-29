@@ -378,7 +378,7 @@ div.card-title{
   .box-container{
     display: grid;
       grid-template-columns:repeat(2, 1fr) ; /* 4 kutu, her biri 1 fraksiyon genişliğinde */
-      grid-gap: 5px; /* kutular arasındaki boşluk */
+      grid-gap: 20px; /* kutular arasındaki boşluk */
       width: 100%;
   }
   .box-container .box{
@@ -529,6 +529,7 @@ font-size: 30px;
     width: 100%;
     padding: 5%;
     justify-content: center;
+    padding: 11%;
   }
   .box-container .box img{
     padding: 13%;

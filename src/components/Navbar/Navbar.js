@@ -5,46 +5,56 @@ import "./NavbarStyles.css";
 import { FaShoppingCart, FaHeart, FaUserCircle } from "react-icons/fa";
 
 class Navbar extends Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-        clicked: false,
-        cartItems: [],
-        cartItemCount: 0
-      };
-    }
-  
-    componentDidMount() {
-      const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-      const cartItemCount = cartItems.reduce(
-        (count, item) => count + item.quantity,
-        0
-      );
-      this.setState({ cartItems, cartItemCount });
-    }
-  
-    componentDidUpdate() {
-      localStorage.setItem("cartItems", JSON.stringify(this.state.cartItems));
-    }
-  
-    handleClick = () => {
-       
-      this.setState({ clicked: !this.state.clicked });
+  constructor(props) {
+    super(props);
+    this.state = {
+      clicked: false,
+      cartItems: [],
+      cartItemCount: 0,
+      showNavbar: false // başlangıçta navbar'ı gizlemek için
     };
+  }
+
+  componentDidMount() {
+    const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+    const cartItemCount = cartItems.reduce(
+      (count, item) => count + item.quantity,
+      0
+    );
+    this.setState({ cartItems, cartItemCount });
+    
+    window.addEventListener("scroll", this.handleScroll); // scroll olayını dinlemek için
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll); // scroll olayını kaldırmak için
+  }
+
   
-    render() {
-      const props = this.props
-      console.log('thisprops::', props)
-      
-      const styles = { color: "#FBD786" };
-      
-      const basketRedirect = () => {
-        window.location.replace("/basket")
-      };
+  handleScroll = () => {
+    const scrollTop = window.pageYOffset; // yukarı kaydırılan mesafe
+    const isScrolledDown = scrollTop > 0; // yukarı kaydırıldı mı?
+    this.setState({ showNavbar: isScrolledDown }); // navbar'ın görünürlüğünü güncelleyin
+  };
+
+  handleClick = () => {
+    this.setState({ clicked: !this.state.clicked });
+  };
+
+  render() {
+    const { showNavbar } = this.state; // navbar'ın görünürlüğünü alın
+    const props = this.props;
+    console.log('thisprops::', props)
+
+    const styles = { color: "#FBD786" };
+
+    const basketRedirect = () => {
+      window.location.replace("/basket")
+    };
 
       return(
           <>
-          <nav>
+          <nav className={showNavbar ? "hidden" : ""}> {/* navbar'ı gizlemek için "hidden" sınıfını kullanın */}
               <div id="left-text">
               <a href="index.html">
               <svg id="logo-38" width="78" height="32" viewBox="0 0 78 32" fill="none" xmlns="http://www.w3.org/2000/svg"> 
