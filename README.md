@@ -3,7 +3,6 @@
 * Skeleton structure used
 * React Router used
 * Bootstrap used
-* Redux used
 * Inline Style used
 * Design work
 
